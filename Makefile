@@ -17,7 +17,6 @@ SCRIPT_DIR := scripts
 
 LIBS = -lc -lm -lnosys
 LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBS) -Wl,-Map=$(BUILD)/$(TARGET).map,--cref -Wl,--gc-sections
-# LDFLAGS = $(MCU) -specs=nano.specs $(LIBS) -Wl,-Map=$(BUILD)/$(TARGET).map,--cref -Wl,--gc-sections
 
 include src/bootloader/src.mak
 include src/application/src.mak
